@@ -25,6 +25,11 @@ pub use vulnerabilities::illicit_fee_collection::IllicitFeeVulnerability;
 pub use vulnerabilities::flash_loan::FlashLoanVulnerability;
 pub use vulnerabilities::logic_errors::LogicErrorVulnerability;
 pub use vulnerabilities::random_manipulation::RandomManipulationVulnerability;
+pub use vulnerabilities::signature_verification::SignatureVerificationVulnerability;
+pub use vulnerabilities::account_confusion::AccountConfusionVulnerability;
+pub use vulnerabilities::front_running::FrontRunningVulnerability;
+pub use vulnerabilities::inadequate_events::InadequateEventsVulnerability;
+pub use vulnerabilities::storage_management::StorageManagementVulnerability;
 
 /// Helpful type aliases
 pub type Result<T> = std::result::Result<T, Error>;
@@ -61,6 +66,21 @@ pub enum Error {
     
     #[error("Random manipulation detected")]
     RandomManipulation,
+    
+    #[error("Signature verification bypass detected")]
+    SignatureVerification,
+    
+    #[error("Account confusion detected")]
+    AccountConfusion,
+    
+    #[error("Front-running detected")]
+    FrontRunning,
+    
+    #[error("Inadequate event emission detected")]
+    InadequateEvents,
+    
+    #[error("Storage management issue detected")]
+    StorageManagement,
     
     #[error("Generic error: {0}")]
     Generic(String),

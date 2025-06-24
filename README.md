@@ -55,12 +55,88 @@ Each vulnerability is explained with:
     - Predictable randomness
     - Seed manipulation
 
+11. **Signature Verification Bypass**
+    - Improper signature validation
+    - Replay attack vulnerabilities
+
+12. **Account Confusion**
+    - Incorrect account validation
+    - Cross-instance attacks on Solana
+
+13. **Front-Running**
+    - Transaction ordering exploitation
+    - MEV vulnerabilities in Rust contexts
+
+14. **Inadequate Event Emissions**
+    - Missing critical events for off-chain monitoring
+    - Insufficient logging for security audit trails
+
+15. **Storage/Account Management**
+    - Memory safety issues specific to blockchain contexts
+    - Account data validation failures
+
 ## Usage
 
 The repository is structured to allow easy navigation between vulnerability types. Each vulnerability has:
+
 - Explanatory documentation in markdown
 - Code examples showing both vulnerable and secure implementations
 - Test cases demonstrating exploitation and mitigation
+
+## Platform-Specific Vulnerabilities
+
+### Solana
+
+- Account validation issues
+- Cross-Program Invocation (CPI) security concerns
+- PDAs and bump seeds validation
+- Instruction data validation
+- Compute budget considerations
+
+### NEAR
+
+- Cross-contract call vulnerabilities
+- Storage management issues
+- Gas efficiency concerns
+- Promise chain vulnerabilities
+
+### CosmWasm (Rust on Cosmos)
+
+- Message passing vulnerabilities
+- State management issues
+- Contract migration risks
+
+### Substrate/Polkadot
+
+- Runtime module interactions
+- Governance mechanism vulnerabilities
+- Parachain-specific concerns
+
+## Interactive Tools
+
+This repository includes several tools to enhance the learning experience:
+
+1. **Vulnerability Scanner CLI**: A command-line tool that can scan Rust smart contract code for potential security issues.
+2. **Exploitation Sandbox**: Interactive examples where you can safely experiment with exploiting vulnerabilities.
+3. **Security Checklist Generator**: Creates a tailored security checklist based on your project's characteristics.
+
+## Security Checklists
+
+We provide comprehensive security checklists for auditors reviewing Rust smart contracts:
+
+- **General Rust Smart Contract Checklist**: Universal security considerations for all Rust-based smart contracts
+- **Solana-Specific Checklist**: Focusing on Account validation, PDAs, and CPIs
+- **NEAR-Specific Checklist**: Addressing cross-contract calls and storage concerns
+- **Audit Preparation Checklist**: How to prepare a Rust smart contract codebase for a security audit
+
+## Real-World Case Studies
+
+Learn from historical vulnerabilities discovered in production systems:
+
+- **Case Study 1**: Cross-program invocation vulnerability in a Solana protocol
+- **Case Study 2**: Integer overflow exploit in a NEAR application
+- **Case Study 3**: Access control bypass in a CosmWasm contract
+- **Case Study 4**: Logic error in a high-value DeFi application
 
 ## For Auditors
 

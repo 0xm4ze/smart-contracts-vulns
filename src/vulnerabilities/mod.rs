@@ -16,6 +16,11 @@ pub mod illicit_fee_collection;
 pub mod flash_loan;
 pub mod logic_errors;
 pub mod random_manipulation;
+pub mod signature_verification;
+pub mod account_confusion;
+pub mod front_running;
+pub mod inadequate_events;
+pub mod storage_management;
 
 /// Common trait for all vulnerability examples
 pub trait Vulnerability {
