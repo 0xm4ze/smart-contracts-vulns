@@ -15,8 +15,15 @@ near-sdk = "5.0.0"
 rand = "0.8.5"
 thiserror = "1.0.40"
 hex = "0.4.3"
+regex = "1.8.4"
+clap = { version = "4.3.10", features = ["derive"] }
+colored = "2.0.4"
 
 [dev-dependencies]
 criterion = "0.5"
 pretty_assertions = "1.3.0"
 proptest = "1.2.0"
+
+[[bin]]
+name = "vuln_scanner"
+path = "src/bin/vuln_scanner.rs"
