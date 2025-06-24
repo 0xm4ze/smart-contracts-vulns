@@ -12,6 +12,11 @@ use rust_smart_contracts_vulns::{
         flash_loan::FlashLoanVulnerability,
         logic_errors::LogicErrorVulnerability,
         random_manipulation::RandomManipulationVulnerability,
+        signature_verification::SignatureVerificationVulnerability,
+        account_confusion::AccountConfusionVulnerability,
+        front_running::FrontRunningVulnerability,
+        inadequate_events::InadequateEventsVulnerability,
+        storage_management::StorageManagementVulnerability,
         Vulnerability,
     },
     VERSION,
@@ -33,6 +38,11 @@ fn main() {
         Box::new(FlashLoanVulnerability {}),
         Box::new(LogicErrorVulnerability {}),
         Box::new(RandomManipulationVulnerability {}),
+        Box::new(SignatureVerificationVulnerability {}),
+        Box::new(AccountConfusionVulnerability {}),
+        Box::new(FrontRunningVulnerability {}),
+        Box::new(InadequateEventsVulnerability {}),
+        Box::new(StorageManagementVulnerability {}),
     ];
     
     // Print a summary of each vulnerability
